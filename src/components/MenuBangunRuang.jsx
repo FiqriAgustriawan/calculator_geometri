@@ -73,7 +73,6 @@ function MenuBangunRuang() {
           }
         }}
       />
-      
     </div>
   );
 }
