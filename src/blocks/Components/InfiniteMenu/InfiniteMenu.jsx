@@ -943,11 +943,11 @@ export default function InfiniteMenu({ items = [], onError }) {
           select-none
           absolute
           font-black
-          [font-size:4rem]
-          left-[1.6em]
+          text-2xl md:text-4xl lg:text-6xl xl:text-7xl
+          left-4 md:left-8 lg:left-[1.6em]
           top-1/2
           transform
-          translate-x-[20%]
+          translate-x-[5%] md:translate-x-[10%] lg:translate-x-[20%]
           -translate-y-1/2
           transition-all
           ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
@@ -965,15 +965,15 @@ export default function InfiniteMenu({ items = [], onError }) {
             className={`
           select-none
           absolute
-          max-w-[10ch]
-          text-[1.5rem]
+          max-w-[15ch] md:max-w-[12ch] lg:max-w-[10ch]
+          text-base md:text-lg lg:text-[1.5rem]
           top-1/2
-          right-[1%]
+          right-[5%] md:right-[3%] lg:right-[1%]
           transition-all
           ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
           ${isMoving
-                ? 'opacity-0 pointer-events-none duration-[100ms] translate-x-[-60%] -translate-y-1/2'
-                : 'opacity-100 pointer-events-auto duration-[500ms] translate-x-[-90%] -translate-y-1/2'
+                ? 'opacity-0 pointer-events-none duration-[100ms] translate-x-[-40%] md:translate-x-[-50%] lg:translate-x-[-60%] -translate-y-1/2'
+                : 'opacity-100 pointer-events-auto duration-[500ms] translate-x-[-70%] md:translate-x-[-80%] lg:translate-x-[-90%] -translate-y-1/2'
               }
         `}
           >
@@ -987,12 +987,11 @@ export default function InfiniteMenu({ items = [], onError }) {
           absolute
           left-1/2
           z-10
-          w-[60px]
-          h-[60px]
+          w-[40px] h-[40px] md:w-[50px] md:h-[50px] lg:w-[60px] lg:h-[60px]
           grid
           place-items-center
           bg-[#00ffff]
-          border-[5px]
+          border-[3px] md:border-[4px] lg:border-[5px]
           border-black
           rounded-full
           cursor-pointer
@@ -1000,11 +999,11 @@ export default function InfiniteMenu({ items = [], onError }) {
           ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
           ${isMoving
                 ? 'bottom-[-80px] opacity-0 pointer-events-none duration-[100ms] scale-0 -translate-x-1/2'
-                : 'bottom-[3.8em] opacity-100 pointer-events-auto duration-[500ms] scale-100 -translate-x-1/2'
+                : 'bottom-[2em] md:bottom-[3em] lg:bottom-[3.8em] opacity-100 pointer-events-auto duration-[500ms] scale-100 -translate-x-1/2'
               }
         `}
           >
-            <p className="select-none relative text-[#060606] top-[2px] text-[26px]">
+            <p className="select-none relative text-[#060606] top-[2px] text-lg md:text-xl lg:text-[26px]">
               &#x2197;
             </p>
           </div>
