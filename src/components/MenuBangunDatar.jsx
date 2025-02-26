@@ -1,57 +1,66 @@
 import React from 'react'
 import InfiniteMenu from '../blocks/Components/InfiniteMenu/InfiniteMenu'
-
 import { useNavigate } from 'react-router-dom';
+
+// Import images from assets
+import persegiImg from '../assets/persegi.png'
+import persegiPanjangImg from '../assets/persegi panjang.jpg'
+import jajarGenjangImg from '../assets/jajar genjang.png'
+import belahKetupatImg from '../assets/belah ketupat.png'
+import layangImg from '../assets/layang2.png'
+import trapesiumImg from '../assets/trapesium.png'
+import lingkaranImg from '../assets/lingkaran.png'
+import segitigaImg from '../assets/segitiga.jpg'
 
 function MenuBangunDatar() {
   const navigate = useNavigate();
   
   const items = [
     {
-      image: '/shapes/persegi.png',
-      link: 'http://localhost:5173/2d/persegi',
+      image: persegiImg,
+      link: '/2d/persegi',
       title: 'Persegi',
       description: 'By: Hilal'
     },
     {
-      image: '/shapes/persegi panjang.jpg',
-      link: 'http://localhost:5173/2d/panjang',
+      image: persegiPanjangImg,
+      link: '/2d/panjang',
       title: 'PPanjang',
       description: 'By: Faras'
     },
     {
-      image: '/shapes/jajar genjang.png',
-      link: 'http://localhost:5173/2d/jgenjang',
+      image: jajarGenjangImg,
+      link: '/2d/jgenjang',
       title: 'JGenjang', 
       description: 'By: Ro\'if'
     },
     {
-      image: '/shapes/belah ketupat.png',
-      link: 'http://localhost:5173/2d/ketupat',
+      image: belahKetupatImg,
+      link: '/2d/ketupat',
       title: 'Ketupat',
       description: 'By: Raja Fiqri'
     },
     {
-      image: '/shapes/layang2.png',
-      link: 'http://localhost:5173/2d/layang2',
+      image: layangImg,
+      link: '/2d/layang2',
       title: 'Layang',
       description: 'By: Abiy'
     },
     {
-      image: '/shapes/trapesium.png',
-      link: 'http://localhost:5173/2d/trapesium',
+      image: trapesiumImg,
+      link: '/2d/trapesium',
       title: 'Trapesium',
       description: 'By: Dendra'
     },
     {
-      image: '/shapes/lingkaran.png',
-      link: 'http://localhost:5173/2d/lingkaran',
+      image: lingkaranImg,
+      link: '/2d/lingkaran',
       title: 'Lingkaran',
       description: 'By: Akram'
     },
     {
-      image: '/shapes/segitiga.jpg',
-      link: 'http://localhost:5173/2d/segitiga',
+      image: segitigaImg,
+      link: '/2d/segitiga',
       title: 'Segitiga',
       description: 'By: Daniel'
     }
