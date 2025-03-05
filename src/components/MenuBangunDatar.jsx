@@ -1,6 +1,7 @@
 import React from 'react'
 import InfiniteMenu from '../blocks/Components/InfiniteMenu/InfiniteMenu'
 import { useNavigate } from 'react-router-dom';
+import { BASE_URL } from '../config/config';
 
 // Import images from assets
 import persegiImg from '../assets/persegi.png'
@@ -18,51 +19,51 @@ function MenuBangunDatar() {
   const items = [
     {
       image: persegiImg,
-      link: '/2d/persegi',
+      link: `${BASE_URL}/2d/persegi`,
       title: 'Persegi',
       description: 'By: Hilal'
     },
     {
       image: persegiPanjangImg,
-      link: '/2d/panjang',
+      link: `${BASE_URL}/2d/panjang`,
       title: 'PPanjang',
       description: 'By: Faras'
     },
     {
+      image: segitigaImg,
+      link: `${BASE_URL}/2d/segitiga`,
+      title: 'Segitiga',
+      description: 'By: Daniel'
+    },
+    {
       image: jajarGenjangImg,
-      link: '/2d/jgenjang',
-      title: 'JGenjang', 
+      link: `${BASE_URL}/2d/jgenjang`,
+      title: 'JGenjang',
       description: 'By: Ro\'if'
     },
     {
       image: belahKetupatImg,
-      link: '/2d/ketupat',
+      link: `${BASE_URL}/2d/ketupat`,
       title: 'Ketupat',
       description: 'By: Raja Fiqri'
     },
     {
       image: layangImg,
-      link: '/2d/layang2',
+      link: `${BASE_URL}/2d/layang2`,
       title: 'Layang',
       description: 'By: Abiy'
     },
     {
       image: trapesiumImg,
-      link: '/2d/trapesium',
+      link: `${BASE_URL}/2d/trapesium`,
       title: 'Trapesium',
       description: 'By: Dendra'
     },
     {
       image: lingkaranImg,
-      link: '/2d/lingkaran',
+      link: `${BASE_URL}/2d/lingkaran`,
       title: 'Lingkaran',
       description: 'By: Akram'
-    },
-    {
-      image: segitigaImg,
-      link: '/2d/segitiga',
-      title: 'Segitiga',
-      description: 'By: Daniel'
     }
   ].map(item => ({
     ...item,

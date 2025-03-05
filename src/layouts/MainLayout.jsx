@@ -1,7 +1,7 @@
 import React from 'react'
 import Dock from '../blocks/Components/Dock/Dock'
 import { useNavigate } from 'react-router-dom'
-import { HomeIcon, BookOpenIcon, Square3Stack3DIcon, CubeIcon } from '@heroicons/react/24/outline'
+import { HomeIcon, BookOpenIcon, Square3Stack3DIcon, CubeIcon, UserCircleIcon } from '@heroicons/react/24/outline'
 import AIChatHelper from '../components/AIChatHelper'
 
 function MainLayout({ children }) {
@@ -27,6 +27,11 @@ function MainLayout({ children }) {
       icon: <CubeIcon className="w-6 h-6 text-white" />,
       label: "Bangun Ruang",
       onClick: () => navigate('/3d'),
+    },
+    {
+      icon: <UserCircleIcon className="w-6 h-6 text-white" />,
+      label: "Profile",
+      onClick: () => navigate('/profile'),
     },
   ]
 

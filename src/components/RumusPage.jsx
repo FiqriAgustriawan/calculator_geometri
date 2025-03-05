@@ -27,9 +27,8 @@ function RumusPage() {
       { name: 'Prisma', formulas: ['V = La × t', 'LP = 2La + (Ka × t)'], note: 'La = luas alas, Ka = keliling alas' }
     ]
   };
-
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white p-8 relative overflow-hidden">
+    <div className="min-h-screen bg-[#0a0a0a] text-white relative overflow-hidden">
       {/* Squares Background */}
       <div className="absolute inset-0 z-0">
         <Squares
@@ -41,15 +40,15 @@ function RumusPage() {
         />
       </div>
       
-      <div className="max-w-7xl mx-auto relative z-10">
-        <h1 className="text-3xl font-bold text-center mb-8">Rumus Matematika</h1>
+      <div className="max-w-7xl mx-auto relative z-20 p-4 sm:p-6 md:p-8">
+        <h1 className="text-2xl sm:text-3xl font-bold text-center mb-4 sm:mb-8">Rumus Matematika</h1>
         
-        <div className="flex justify-center gap-4 mb-8">
+        <div className="flex justify-center gap-2 sm:gap-4 mb-4 sm:mb-8">
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={() => setActiveCategory('2d')}
-            className={`px-6 py-2 rounded-lg transition-colors ${
+            className={`px-4 sm:px-6 py-2 rounded-lg transition-colors text-sm sm:text-base ${
               activeCategory === '2d' 
                 ? 'bg-blue-600 text-white' 
                 : 'bg-gray-700 text-gray-200 hover:bg-gray-600'
@@ -61,7 +60,7 @@ function RumusPage() {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={() => setActiveCategory('3d')}
-            className={`px-6 py-2 rounded-lg transition-colors ${
+            className={`px-4 sm:px-6 py-2 rounded-lg transition-colors text-sm sm:text-base ${
               activeCategory === '3d' 
                 ? 'bg-blue-600 text-white' 
                 : 'bg-gray-700 text-gray-200 hover:bg-gray-600'
@@ -71,24 +70,24 @@ function RumusPage() {
           </motion.button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {formulas[activeCategory].map((item, index) => (
             <motion.div
               key={item.name}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.05 }}
-              className="bg-gray-800/50 backdrop-blur-sm p-5 rounded-lg border border-gray-700 hover:border-blue-500/50 transition-all"
+              className="bg-gray-800/50 backdrop-blur-sm p-3 sm:p-5 rounded-lg border border-gray-700 hover:border-blue-500/50 transition-all"
             >
-              <h3 className="text-lg font-semibold mb-3 text-blue-400">{item.name}</h3>
+              <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 text-blue-400">{item.name}</h3>
               <div className="space-y-2">
                 {item.formulas.map((formula, idx) => (
                   <div key={idx} className="bg-gray-900/50 p-2 rounded">
-                    <p className="font-mono text-sm text-gray-200">{formula}</p>
+                    <p className="font-mono text-xs sm:text-sm text-gray-200">{formula}</p>
                   </div>
                 ))}
                 <div className="mt-2 pt-2 border-t border-gray-700">
-                  <p className="text-xs text-gray-400">{item.note}</p>
+                  <p className="text-[10px] sm:text-xs text-gray-400">{item.note}</p>
                 </div>
               </div>
             </motion.div>
